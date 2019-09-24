@@ -42,6 +42,4 @@ class TextareaFieldTypeAccessor extends FieldTypeAccessor
 
         return $value;
     }
-
-
 }

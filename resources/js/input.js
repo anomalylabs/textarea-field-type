@@ -46,5 +46,5 @@
          */
         field.dispatchEvent(new Event('keyup'));
     });
-    
+
 })(window, document);

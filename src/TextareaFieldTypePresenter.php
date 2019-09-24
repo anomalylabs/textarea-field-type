@@ -51,9 +51,20 @@ class TextareaFieldTypePresenter extends FieldTypePresenter
     }
 
     /**
+     * Return a specific line.
+     *
+     * @param  int $number
+     * @return string
+     */
+    public function line($number = 1)
+    {
+        return array_get($this->lines(), $number - 1);
+    }
+
+    /**
      * Return the lines.
      *
-     * @param  int   $limit
+     * @param  int $limit
      * @return array
      */
     public function lines($limit = 9999)
@@ -67,20 +78,9 @@ class TextareaFieldTypePresenter extends FieldTypePresenter
     }
 
     /**
-     * Return a specific line.
-     *
-     * @param  int    $number
-     * @return string
-     */
-    public function line($number = 1)
-    {
-        return array_get($this->lines(), $number - 1);
-    }
-
-    /**
      * Return a limited string.
      *
-     * @param  int    $limit
+     * @param  int $limit
      * @param  string $end
      * @return string
      */
