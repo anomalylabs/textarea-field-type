@@ -1,6 +1,6 @@
 <?php
 
-namespace Anomaly\TextFieldType;
+namespace Anomaly\TextareaFieldType;
 
 use Anomaly\Streams\Platform\Addon\AddonServiceProvider;
 use Illuminate\Contracts\Support\DeferrableProvider;
