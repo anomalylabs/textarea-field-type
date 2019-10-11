@@ -19,6 +19,6 @@ class TextareaFieldTypeServiceProvider extends AddonServiceProvider implements D
      */
     public function provides()
     {
-        return [TextareaFieldType::class];
+        return [TextareaFieldType::class, 'anomaly.field_type.textarea'];
     }
 }
