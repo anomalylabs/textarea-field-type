@@ -1,4 +1,6 @@
-<?php namespace Anomaly\TextareaFieldType;
+<?php
+
+namespace Anomaly\TextareaFieldType;
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
 
@@ -55,5 +57,22 @@ class TextareaFieldType extends FieldType
         }
 
         return $rules;
+    }
+
+    /**
+     * Get the attributes.
+     * 
+     * @return array
+     */
+    public function getAttributes()
+    {
+        return array_merge(parent::getAttributes(), [
+            'value'         => null,
+            'type'          => 'text',
+            'maxlength'     => $this->config('max'),
+            'data-max'      => $this->config('max'),
+            'rows'          => $this->config('rows', 6),
+            'data-autogrow' => $this->config('autogrow'),
+        ]);
     }
 }
