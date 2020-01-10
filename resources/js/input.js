@@ -1,4 +1,4 @@
-(function (window, document) {
+(function () {
 
     const fields = Array.prototype.slice.call(
         document.querySelectorAll('textarea[data-provides="anomaly.field_type.textarea"]')
@@ -26,9 +26,9 @@
             let count = wrapper.querySelector('.count');
 
             if (count) {
-                count.innerText = max
-                    ? max - field.value.length
-                    : field.value.length;
+                count.innerText = max ?
+                    max - field.value.length :
+                    field.value.length;
             }
 
             if (counter) {
@@ -47,4 +47,4 @@
         field.dispatchEvent(new Event('keyup'));
     });
 
-})(window, document);
+});
