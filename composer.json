@@ -19,6 +19,7 @@
         "email": "support@anomaly.is"
     },
     "require": {
+        "symfony/yaml": "^5.0",
         "anomaly/streams-platform": "^2.0"
     },
     "autoload": {
