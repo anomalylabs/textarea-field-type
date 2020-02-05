@@ -1,7 +1,6 @@
 <?php namespace Anomaly\TextareaFieldType;
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldTypePresenter;
-use Symfony\Component\Yaml\Yaml;
 
 /**
  * Class TextareaFieldTypePresenter
@@ -14,41 +13,12 @@ class TextareaFieldTypePresenter extends FieldTypePresenter
 {
 
     /**
-     * The YAML parser.
-     *
-     * @var Yaml
-     */
-    protected $yaml;
-
-    /**
      * The decorated object.
      * This is for IDE hinting.
      *
      * @var TextareaFieldType
      */
     protected $object;
-
-    /**
-     * Create a new TextareaFieldTypePresenter instance.
-     *
-     * @param mixed $object
-     */
-    public function __construct(Yaml $yaml, $object)
-    {
-        $this->yaml = $yaml;
-
-        parent::__construct($object);
-    }
-
-    /**
-     * Return the parsed as YAML.
-     *
-     * @return array
-     */
-    public function yaml()
-    {
-        return $this->yaml->parse($this->object->getValue());
-    }
 
     /**
      * Return a specific line.
