@@ -1,6 +1,3 @@
-{{ assets("scripts.js", "anomaly.field_type.textarea::js/autosize.min.js", ["as:jackmoore/autosize.js"]) }}
-{{ assets("scripts.js", "anomaly.field_type.textarea::js/input.js") }}
-
 <textarea {!! html_attributes($fieldType->attributes()) !!}>{{ $fieldType->value }}</textarea>
 
 @if ($fieldType->config('show_counter'))
