@@ -2,7 +2,7 @@
     assets('scripts.js')->add('public::vendor/anomaly/field_type/textarea/js/index.js');
 @endphp
 
-<textarea-field-type {!! html_attributes([
+<textarea-field-type {!! html_attributes($fieldType->attributes([
     'class' => $fieldType->getClass(),
     'value' => $fieldType->getValue(),
     'name' => $fieldType->getInputName(),
@@ -10,7 +10,7 @@
     'autogrow' => $fieldType->config('autogrow'),
     'maxlength' => $fieldType->config('max'),
     'rows' => $fieldType->config('rows', 3),
-]) !!}/>
+])) !!}/>
 
 {{-- <textarea {!! html_attributes($fieldType->attributes()) !!}>{{ $fieldType->value }}</textarea> --}}
 
