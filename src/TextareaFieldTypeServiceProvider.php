@@ -14,14 +14,6 @@ use Illuminate\Contracts\Support\DeferrableProvider;
 class TextareaFieldTypeServiceProvider extends AddonServiceProvider implements DeferrableProvider
 {
 
-    public function boot()
-    {
-        parent::boot();
-
-        assets("scripts.js", "anomaly.field_type.textarea::js/autosize.min.js", ["as:jackmoore/autosize.js"]);
-        assets("scripts.js", "anomaly.field_type.textarea::js/input.js");
-    }
-
     /**
      * Return the provided services.
      */
