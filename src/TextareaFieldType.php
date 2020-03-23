@@ -34,7 +34,7 @@ class TextareaFieldType extends FieldType
      * @var array
      */
     protected $config = [
-        'rows'     => 6,
+        'rows'     => 3,
         'storage'  => null,
         'autogrow' => true,
     ];
@@ -57,22 +57,5 @@ class TextareaFieldType extends FieldType
         }
 
         return $rules;
-    }
-
-    /**
-     * Get the attributes.
-     * 
-     * @return array
-     */
-    public function getAttributes()
-    {
-        return array_merge(parent::getAttributes(), [
-            'value'         => null,
-            'type'          => 'text',
-            'maxlength'     => $this->config('max'),
-            'data-max'      => $this->config('max'),
-            'rows'          => $this->config('rows', 6),
-            'data-autogrow' => $this->config('autogrow'),
-        ]);
     }
 }

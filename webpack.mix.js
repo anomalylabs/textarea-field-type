@@ -2,6 +2,20 @@ let mix = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
+ | Webpack Configuration
+ |--------------------------------------------------------------------------
+ |
+ | Configure webpack...
+ |
+ */
+mix.webpackConfig({
+    externals: {
+        "@anomaly/streams-platform": "streams"
+    }
+});
+
+/*
+ |--------------------------------------------------------------------------
  | Mix Asset Management
  |--------------------------------------------------------------------------
  |
@@ -12,13 +26,8 @@ let mix = require('laravel-mix');
  */
 
 mix
-    .copy('node_modules/choices/choices.js', 'resources/js')
-    .sass('resources/scss/choices.scss', 'resources/css')
-    .sass('resources/scss/lookup.scss', 'resources/css')
-    .sass('resources/scss/tags.scss', 'resources/css')
-    .options({
-        processCssUrls: false
-    });
+    .js('resources/assets/js/index.js', 'resources/dist/js')
+    .copyDirectory('resources/dist', '../../../public/vendor/anomaly/field_type/textarea');
 
 // Full API
 // mix.js(src, output);
