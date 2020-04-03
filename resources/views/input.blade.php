@@ -3,10 +3,6 @@
 @endphp
 
 <textarea-field-type {!! html_attributes($fieldType->attributes([
-    'class' => $fieldType->getClass(),
-    'value' => $fieldType->getValue(),
-    'name' => $fieldType->getInputName(),
-    'placeholder' => $fieldType->getPlaceholder(),
     'autogrow' => $fieldType->config('autogrow'),
     'maxlength' => $fieldType->config('max'),
     'rows' => $fieldType->config('rows', 3),
