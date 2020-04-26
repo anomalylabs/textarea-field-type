@@ -4,7 +4,7 @@
 
 <v-input>
     <v-textarea
-    {!! html_attributes([
+    {!! html_attributes($fieldType->attributes([
         'value'    => $fieldType->getValue(),
         'label'    => $fieldType->getLabel(),
         'name'     => $fieldType->getInputName(),
@@ -23,7 +23,7 @@
     
         // 'class' => $fieldType->getClass(),
         // 'id'    => $fieldType->getInputName(),
-    ]) !!}
+    ])) !!}
     
     outlined
     clearable
