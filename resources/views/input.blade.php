@@ -14,7 +14,7 @@
         'rows'      => $fieldType->config('rows', 3),
         'maxlength' => $fieldType->config('max'),
 
-        'readonly' => $fieldType->isReadonly() ? true : false,
+        'readonly' => $fieldType->readonly ? true : false,
         'disabled' => $fieldType->isDisabled() ? true : false,
     
         // 'data-field'      => $fieldType->getField(),
