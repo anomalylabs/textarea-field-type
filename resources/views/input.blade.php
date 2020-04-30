@@ -6,11 +6,11 @@
     <v-textarea
     {!! html_attributes($fieldType->attributes([
         'value'    => $fieldType->getValue(),
-        'label'    => $fieldType->getLabel(),
+        'label'    => $fieldType->label,
         'name'     => $fieldType->getInputName(),
         'messages' => $fieldType->instructions,
         
-        'autogrow'  => (bool)$fieldType->config('autogrow'),
+        'autogrow'  => $fieldType->config('autogrow'),
         'rows'      => $fieldType->config('rows', 3),
         'maxlength' => $fieldType->config('max'),
 
