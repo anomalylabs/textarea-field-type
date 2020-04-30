@@ -47,11 +47,11 @@ class TextareaFieldType extends FieldType
      */
     public function rules(array $rules = [])
     {
-        if ($min = array_get($this->getConfig(), 'min')) {
+        if ($min = $this->config('min')) {
             $rules[] = 'min:' . $min;
         }
 
-        if ($max = array_get($this->getConfig(), 'max')) {
+        if ($max = $this->config('max')) {
             $rules[] = 'max:' . $max;
         }
 
