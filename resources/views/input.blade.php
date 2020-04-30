@@ -8,7 +8,7 @@
         'value'    => $fieldType->getValue(),
         'label'    => $fieldType->getLabel(),
         'name'     => $fieldType->getInputName(),
-        'messages' => $fieldType->getInstructions(),
+        'messages' => $fieldType->instructions,
         
         'autogrow'  => (bool)$fieldType->config('autogrow'),
         'rows'      => $fieldType->config('rows', 3),
