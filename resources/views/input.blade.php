@@ -15,7 +15,7 @@
         'maxlength' => $fieldType->config('max'),
 
         'readonly' => $fieldType->readonly ? true : false,
-        'disabled' => $fieldType->isDisabled() ? true : false,
+        'disabled' => $fieldType->disabled ? true : false,
     
         // 'data-field'      => $fieldType->getField(),
         // 'data-provides'   => $fieldType->getNamespace(),
