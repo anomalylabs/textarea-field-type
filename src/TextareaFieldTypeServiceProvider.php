@@ -15,10 +15,19 @@ class TextareaFieldTypeServiceProvider extends AddonServiceProvider implements D
 {
 
     /**
+     * The addon alilases.
+     *
+     * @var array
+     */
+    public $aliases = [
+        'textarea' => 'anomaly.field_type.textarea'
+    ];
+
+    /**
      * Return the provided services.
      */
     public function provides()
     {
-        return [TextareaFieldType::class, 'anomaly.field_type.textarea'];
+        return [TextareaFieldType::class, 'anomaly.field_type.textarea', 'textarea'];
     }
 }
