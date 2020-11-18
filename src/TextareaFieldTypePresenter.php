@@ -49,6 +49,16 @@ class TextareaFieldTypePresenter extends FieldTypePresenter
     {
         return $this->yaml->parse($this->object->getValue());
     }
+    
+    /**
+     * Return parsed as JSON.
+     *
+     * @return array
+     */
+    public function json()
+    {
+        return json_decode($this->object->getValue(), true);
+    }
 
     /**
      * Return the lines.
